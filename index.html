@@ -1,0 +1,40 @@
+<html>
+<head>
+<title>My Family Book</title>
+
+</head>
+
+<body>
+    <center style="margin-top: 40px;">
+<h1>My Family Book</h1>
+<img id="image" src="https://images-na.ssl-images-amazon.com/images/I/51KNpAKei-L.jpg" style="width: 30%;">
+<h4 id="name"></h4>
+<button type="button" onclick="nextslide()">Next</button>
+</center>
+</body>
+
+<script>
+var images=["https://images-na.ssl-images-amazon.com/images/I/51KNpAKei-L.jpg",
+"https://webstockreview.net/images/father-clipart-10.jpg", 
+"https://webstockreview.net/images/clipart-mom-cartoon-3.jpg",
+"https://thumbs.dreamstime.com/b/happy-cute-kid-boy-pose-as-model-vector-164555488.jpg",
+"https://lh3.googleusercontent.com/proxy/jZh7boZpL_qCblJVD1_g4dIrhi0TKPGLi6fBJPuHl4KjrIO7xeXH9zVTlUssujFS4STjkkDlZnMZAyxfNQWaWbc"
+];
+
+var names=["Family Book", "Chandrashekhar Chitrada, my father", "Poornima Chitrada, my mother", "Ansh Chitrada, my younger brother", "And thats me, Keyur Chitrada"];
+
+var i=0;
+function nextslide() {
+i++;
+var number_of_family_members_in_array=4;
+if(i > number_of_family_members_in_array)
+{
+    i=0;
+}
+var updatedImage=images[i];
+var updatedName=names[i];
+document.getElementById("image").src=updatedImage;
+document.getElementById("name").innerHTML=updatedName;
+}
+</script>
+</html>
